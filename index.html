@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miki | Cybersecurity Portfolio & CTFs</title>
+    <meta name="description" content="Portfolio de Ciberseguridad, Máquinas creadas en Dockerlabs/VulnHub, CTFs resueltos y Writeups técnicos de Hack The Box y TryHackMe.">
+    
+    <!-- Open Graph / Meta Social -->
+    <meta property="og:title" content="Miki | Cybersecurity & Ethical Hacking Portfolio">
+    <meta property="og:description" content="CTFs resueltos, máquinas creadas, certificaciones y proyectos de seguridad ofensiva.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cyber Background Animation & CRT Scanline -->
+    <canvas id="cyber-canvas"></canvas>
+    <div class="scanline"></div>
+
+    <div class="content-wrapper">
+        <!-- Navigation Bar -->
+        <header class="navbar">
+            <div class="container nav-container">
+                <a href="#hero" class="logo">
+                    <span class="logo-bracket">&lt;</span>mikisbd<span class="logo-dot">/</span><span class="logo-bracket">&gt;</span>
+                </a>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#about">Sobre Mí</a></li>
+                    <li><a href="#skills">Habilidades</a></li>
+                    <li><a href="#certifications">Certificaciones</a></li>
+                    <li><a href="#created-machines">Máquinas Creadas</a></li>
+                    <li><a href="#ctfs">CTFs Resueltos</a></li>
+                    <li><a href="#projects">Proyectos</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="hero-badge">
+                            <span class="status-indicator"></span>
+                            <span id="hero-status">Listo para nuevos retos</span>
+                        </div>
+                        <h1>
+                            Hola, soy <span class="text-gradient" id="hero-name">Miki</span>
+                        </h1>
+                        <div class="hero-typewriter-container">
+                            <span class="mono" style="color: var(--accent-green); margin-right: 8px;">&gt;</span>
+                            <span id="typewriter-text"></span><span class="typewriter-cursor"></span>
+                        </div>
+                        <p class="hero-bio" id="hero-bio">
+                            Especialista en seguridad ofensiva, resolución de retos CTF y diseño de entornos vulnerables para la comunidad.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="#ctfs" class="btn btn-primary">
+                                <i class="fas fa-flag"></i> Explorar CTFs
+                            </a>
+                            <a href="#created-machines" class="btn btn-secondary">
+                                <i class="fas fa-microchip"></i> Máquinas Creadas
+                            </a>
+                            <a href="#contact" class="btn btn-outline">
+                                <i class="fas fa-terminal"></i> Contactar
+                            </a>
+                        </div>
+                        <div class="hero-socials" id="hero-socials">
+                            <!-- Inyectado por app.js -->
+                        </div>
+                    </div>
+
+                    <!-- Terminal Visual Card -->
+                    <div class="terminal-card">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span class="terminal-title">bash — 80x24</span>
+                            <span style="width: 36px;"></span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="term-line">
+                                <span class="term-prompt">miki@kali:~$</span> <span class="term-cmd">whoami</span>
+                                <div class="term-output term-output-highlight">ethical-hacker / lab-creator</div>
+                            </div>
+                            <div class="term-line">
+                                <span class="term-prompt">miki@kali:~$</span> <span class="term-cmd">cat specialty.json</span>
+                                <div class="term-output">
+                                    {<br>
+                                    &nbsp;&nbsp;"focus": "Red Teaming & Pentesting",<br>
+                                    &nbsp;&nbsp;"targets": ["Linux", "Active Directory"],<br>
+                                    &nbsp;&nbsp;"tools": ["Nmap", "BurpSuite", "BloodHound"]<br>
+                                    }
+                                </div>
+                            </div>
+                            <div class="term-line">
+                                <span class="term-prompt">miki@kali:~$</span> <span class="term-cmd">./check_status.sh</span>
+                                <div class="term-output neon-text-green">[✓] Ready to break & secure systems.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Ribbon -->
+                <div class="stats-ribbon" id="stats-ribbon">
+                    <!-- Inyectado por app.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag mono">// 01. INTRODUCCIÓN</span>
+                    <h2 class="section-title">Sobre Mí</h2>
+                    <p class="section-subtitle">Conoce mi trayectoria, mentalidad y pasión por la seguridad informática.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="cyber-card about-card-left">
+                        <img src="" alt="Avatar" class="about-avatar" id="about-avatar">
+                        <h3 class="about-name" id="about-name">Miki</h3>
+                        <div class="about-handle" id="about-handle">@mikisbd</div>
+                        <a href="#" class="btn btn-outline btn-sm" id="cv-download-btn" target="_blank" rel="noopener">
+                            <i class="fas fa-file-pdf"></i> Descargar Curriculum
+                        </a>
+
+                        <div class="about-highlights">
+                            <div class="about-hl-item">
+                                <i class="fas fa-map-marker-alt"></i> España
+                            </div>
+                            <div class="about-hl-item">
+                                <i class="fas fa-crosshairs"></i> Pentesting & Red Team
+                            </div>
+                            <div class="about-hl-item">
+                                <i class="fas fa-graduation-cap"></i> Formación Continua
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cyber-card about-content-right" id="about-bio-text">
+                        <!-- Inyectado por app.js -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills & Arsenal Section -->
+        <section class="section" id="skills" style="background: rgba(13, 18, 28, 0.4);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag mono">// 02. HABILIDADES</span>
+                    <h2 class="section-title">Arsenal & Conocimientos</h2>
+                    <p class="section-subtitle">Disciplinas de seguridad ofensiva, herramientas del día a día y tecnologías de desarrollo.</p>
+                </div>
+                <div class="skills-grid" id="skills-grid">
+                    <!-- Inyectado por app.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="section" id="certifications">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag mono">// 03. CREDENCIALES</span>
+                    <h2 class="section-title">Certificaciones & Logros</h2>
+                    <p class="section-subtitle">Acreditaciones oficiales obtenidas y certificaciones que estoy preparando activamente.</p>
+                </div>
+                <div class="certs-grid" id="certs-grid">
+                    <!-- Inyectado por app.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Author Created Machines Section -->
+        <section class="section" id="created-machines" style="background: rgba(13, 18, 28, 0.4);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag mono">// 04. LABORATORIOS</span>
+                    <h2 class="section-title">Máquinas Creadas</h2>
+                    <p class="section-subtitle">Entornos y desafíos diseñados por mí para plataformas comunitarias como Dockerlabs y VulnHub.</p>
+                </div>
+                <div class="machines-grid" id="created-machines-grid">
+                    <!-- Inyectado por app.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Resolved CTFs Section -->
+        <section class="section" id="ctfs">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag mono">// 05. WRITEUPS</span>
+                    <h2 class="section-title">CTFs & Máquinas Resueltas</h2>
+                    <p class="section-subtitle">Bitácora de máquinas vulneradas en Hack The Box, TryHackMe y Dockerlabs con desglose técnico paso a paso.</p>
+                </div>
+
+                <!-- Search & Filters Toolbar -->
+                <div class="ctf-toolbar">
+                    <div class="ctf-search-wrapper">
+                        <i class="fas fa-search ctf-search-icon"></i>
+                        <input type="text" id="ctf-search" class="ctf-search-input" placeholder="Buscar por nombre, vulnerabilidad, tag (ej: LFI, SMB, SUID)...">
+                    </div>
+                    <div class="ctf-filter-row">
+                        <div class="filter-group">
+                            <span class="filter-label">Plataforma:</span>
+                            <button class="filter-pill active" data-filter-platform="all">Todas</button>
+                            <button class="filter-pill" data-filter-platform="hackthebox">Hack The Box</button>
+                            <button class="filter-pill" data-filter-platform="tryhackme">TryHackMe</button>
+                            <button class="filter-pill" data-filter-platform="dockerlabs">Dockerlabs</button>
+                        </div>
+                        <div class="filter-group">
+                            <span class="filter-label">Dificultad:</span>
+                            <button class="filter-pill active" data-filter-diff="all">Todas</button>
+                            <button class="filter-pill" data-filter-diff="facil">Fácil</button>
+                            <button class="filter-pill" data-filter-diff="media">Media</button>
+                            <button class="filter-pill" data-filter-diff="dificil">Difícil</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ctfs-grid" id="ctfs-grid">
+                    <!-- Inyectado por app.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects & Tools Section -->
+        <section class="section" id="projects" style="background: rgba(13, 18, 28, 0.4);">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag mono">// 06. HERRAMIENTAS</span>
+                    <h2 class="section-title">Proyectos & Scripts</h2>
+                    <p class="section-subtitle">Herramientas de automatización, scripts de reconocimiento y recursos open source que desarrollo.</p>
+                </div>
+                <div class="projects-grid" id="projects-grid">
+                    <!-- Inyectado por app.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section" id="contact">
+            <div class="container contact-container">
+                <div class="cyber-card contact-card">
+                    <span class="section-tag mono">// 07. CONEXIÓN</span>
+                    <h3>¿Hablamos de Seguridad o Proyectos?</h3>
+                    <p>Estoy siempre interesado en colaborar en laboratorios CTF, compartir conocimientos o evaluar oportunidades laborales en seguridad ofensiva.</p>
+                    <div class="contact-channels" id="contact-channels">
+                        <!-- Inyectado por app.js -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container footer-content">
+                <div>
+                    <span>&copy; <span id="current-year">2026</span> mikisbd. All rights reserved.</span>
+                </div>
+                <div class="mono">
+                    <span>Designed for Offensive Security Showcase</span>
+                </div>
+                <div>
+                    <a href="#hero" class="neon-text-green" style="text-decoration: none;">[ ↑ Subir al inicio ]</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal Writeup / Technical Sheet Viewer -->
+    <div class="modal-overlay" id="writeup-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title-group">
+                    <h3 id="modal-title">Título del Writeup</h3>
+                    <div class="modal-meta" id="modal-meta">Plataforma | Dificultad</div>
+                </div>
+                <button class="modal-close-btn" id="modal-close-btn" aria-label="Cerrar ventana">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- Inyectado dinámicamente -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Configuration and Application Scripts -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
