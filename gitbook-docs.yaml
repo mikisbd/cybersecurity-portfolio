@@ -1,4 +1,10 @@
-root: ./
-structure:
-  readme: README.md
-  summary: SUMMARY.md
+$schema: https://api.gitbook.com/gitbook-docs.yaml
+site:
+  title: Cybersecurity Portfolio Docs
+  structure:
+    - type: space
+      key: untitled
+      title: Cybersecurity Portfolio Docs
+      path: ""
+      content:
+        directory: ./
