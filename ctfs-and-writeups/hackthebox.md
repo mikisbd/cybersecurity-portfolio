@@ -2,6 +2,10 @@
 
 Writeups y notas técnicas de máquinas retiradas de [Hack The Box](https://app.hackthebox.com/), cumpliendo rigurosamente con las políticas de divulgación responsable (_No Spoilers de máquinas activas_).
 
+
+
+Visita mi perfil: [https://app.hackthebox.com/users/2398010](https://app.hackthebox.com/users/2398010)
+
 ***
 
 ## 📋 Logros
