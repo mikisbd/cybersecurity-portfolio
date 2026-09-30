@@ -1,17 +1,19 @@
-# 📦 Hack The Box Writeups
+# 📦 Hack The Box
 
-Writeups y notas técnicas de máquinas retiradas de [Hack The Box](https://app.hackthebox.com/), cumpliendo rigurosamente con las políticas de divulgación responsable (*No Spoilers de máquinas activas*).
+Writeups y notas técnicas de máquinas retiradas de [Hack The Box](https://app.hackthebox.com/), cumpliendo rigurosamente con las políticas de divulgación responsable (_No Spoilers de máquinas activas_).
 
----
+***
 
-## 📋 Máquinas Retiradas Resueltas
+## 📋 Logros
 
-| Máquina | Dificultad | SO | Vulnerabilidades / Vectores | Writeup |
-| :--- | :--- | :--- | :--- | :--- |
-| **Lame** | Fácil | Linux | CVE-2007-2447 (Samba usermap script) | *Próximamente* |
-| **Blue** | Fácil | Windows | MS17-010 (EternalBlue) | *Próximamente* |
-| **Sau** | Fácil | Linux | SSRF (Request Baskets) & Command Injection | *Próximamente* |
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
 
----
+***
 
-> ⚠️ *Recordatorio: Solo se publican writeups de máquinas retiradas (Retired Machines) según las normas de Hack The Box.*
+<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+
+***
+
+<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+
+> ⚠️ _Recordatorio: Solo se publican writeups de máquinas retiradas (Retired Machines) según las normas de Hack The Box._
