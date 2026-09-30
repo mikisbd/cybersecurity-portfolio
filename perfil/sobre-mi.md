@@ -1,8 +1,12 @@
+---
+description: Apasionado con todo tipo de tecnologia, PC's, Smartphones, coches, etc...
+---
+
 # 👤 Sobre mí
 
 ¡Hola! Soy **Miki** (`@mikisbd`), analista y entusiasta de la ciberseguridad con un fuerte enfoque en **seguridad ofensiva**, pruebas de penetración (pentesting) y análisis de vulnerabilidades.
 
----
+***
 
 ## 🎯 Mis Objetivos & Especialidad
 
@@ -11,7 +15,7 @@
 * **Creación de Laboratorios (Lab Building)**: Diseño de máquinas vulnerables para plataformas como DockerLabs y VulnHub, permitiendo a la comunidad aprender y entrenar.
 * **Automatización & Scripting**: Desarrollo de scripts en Bash y Python para optimizar las fases de enumeración y escaneo.
 
----
+***
 
 ## 📜 Filosofía de Trabajo
 
