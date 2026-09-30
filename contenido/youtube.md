@@ -1,30 +1,47 @@
-# 📺 Contenido: Canal de YouTube
-
-En esta sección recopilo los vídeos, tutoriales y resolución de retos que publico en YouTube.
-
 ---
+description: la buhardilla de miki
+---
+
+# 📺 YouTube
+
+Bienvenido a mi canal de youtebe.
+
+***
 
 ## 🎥 Sobre el Canal
 
-* **Canal**: [Visitar Canal de YouTube](#)
-* **Temática**: Ciberseguridad práctica, resolución de CTFs paso a paso (HackMyVM, DockerLabs, HTB), tutoriales de herramientas y guías de certificaciones.
+* **Canal**: [Visitar Canal de YouTube](https://www.youtube.com/@mikipande)
+*   **Temática**: Canal especializado en dispositivo LilyGO T-Embed CC1101 Plus, en realización de CTF, analisis de dispistivos, y algun Gameplay, etc...
 
----
+    🔐 Hackeando CTFs
+
+    🔍 Análisis de dispositivos de la buhardilla
+
+    🎮 Jugando en tiempo libre
+
+    📡 Todo en Español.
+
+***
 
 ## 📑 Listas de Reproducción & Series
 
-### 1. Resolución de Máquinas de HackMyVM
-* [Writeup en Vídeo: BITB](#)
-* *(Próximamente más máquinas)*
+### 1. 🎯 Rooteando máquinas | CTFs resueltos paso a paso
 
-### 2. Laboratorios en DockerLabs
-* Explicación de entornos vulnerables locales.
-* Vectores de explotación web y escalada en Linux.
+* [CTF Walkthroughs](https://www.youtube.com/watch?v=qv002Hrikio\&list=PLraY-RO5XbU7BEaIinCuBAdx_wc6q7y7T)
 
-### 3. Hacking Ético & Tutoriales
-* Automatización de reconocimiento con scripts en Bash (`nmip1`).
-* Técnicas de escalada de privilegios explicadas paso a paso.
+### 2. ​😈​ LILYGO T-Embed CC1101 Plus
 
----
+* [📘 Dominando LILYGO T-Embed CC1101 Plus con Bruce Firmware](https://www.youtube.com/watch?v=VyIrHti-A8o\&list=PLLucoEvZWOxM\&pp=sAgC)
+* [🔧 LILYGO T-Embed CC1101 Plus | Más allá de Bruce](https://www.youtube.com/watch?v=ICeb1gLp__4\&list=PLEkS9OEEpobA\&pp=sAgC)
 
-> 🔔 *¡Suscríbete y activa la campana para estar al día de los nuevos laboratorios y writeups!*
+### 3. Analizando difirentes gadgets/dispositivos
+
+* [📦 Los Dispositivos de La Buhardilla ](https://www.youtube.com/playlist?list=PLdK1CsF5bpqs).
+
+### 4. Gameplays
+
+* [🎮 Gameplays Retro Arcade & Sega & otros ](https://www.youtube.com/playlist?list=PLMshWprqHF5A)
+
+***
+
+> 🔔 _¡Suscríbete y activa la campana para estar al día de los nuevos laboratorios y writeups!_
