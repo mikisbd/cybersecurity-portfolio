@@ -1,10 +1,11 @@
 $schema: https://api.gitbook.com/gitbook-docs.yaml
 site:
-  title: Cybersecurity Portfolio Docs
+  title: " cybersecurity-portfolio"
   structure:
     - type: space
-      key: untitled
-      title: Cybersecurity Portfolio Docs
-      path: ""
+      key: space-1
+      title: Docs
+      path: docs
+      default: true
       content:
-        directory: ./
+        directory: ./docs
