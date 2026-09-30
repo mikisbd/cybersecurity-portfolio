@@ -26,6 +26,7 @@ Constantemente aprendiendo y perfeccionando habilidades en metodologías de hack
         social: {
             github: "https://github.com/mikisbd",
             linkedin: "https://www.linkedin.com/in/", // Añade tu perfil de LinkedIn
+            youtube: "https://www.youtube.com/@mikipande", // Canal La Buhardilla de Miki
             hackthebox: "https://app.hackthebox.com/profile/", // Tu ID de HTB
             tryhackme: "https://tryhackme.com/p/", // Tu usuario de THM
             dockerlabs: "https://dockerlabs.es/", // Tu perfil o enlace a Dockerlabs
@@ -33,7 +34,7 @@ Constantemente aprendiendo y perfeccionando habilidades en metodologías de hack
         },
         stats: {
             ctfsSolved: "+50",
-            machinesCreated: "3+",
+            machinesCreated: "7",
             certificationsCount: "35+",
             yearsExp: "3+ años"
         }
@@ -175,59 +176,142 @@ Constantemente aprendiendo y perfeccionando habilidades en metodologías de hack
     createdMachines: [
         {
             id: "mach-1",
-            title: "ShadowLeak",
-            platform: "Dockerlabs",
-            difficulty: "Media", // Fácil, Media, Difícil, Insane
+            title: "Pulse",
+            platform: "HackMyVM",
+            platformUrl: "https://hackmyvm.eu/machines/machine.php?vm=Pulse",
+            difficulty: "Media",
             os: "Linux",
             releaseDate: "2024",
-            tags: ["LFI", "Log Poisoning", "Sudo Privilege Escalation", "Docker"],
-            shortDescription: "Máquina diseñada con un vector de entrada web vía inclusión local de archivos (LFI) que deriva en RCE por envenenamiento de logs y escalada mediante binario mal configurado.",
-            downloadUrl: "https://dockerlabs.es",
-            writeupUrl: "#writeup-shadowleak",
+            logo: "https://hackmyvm.eu/img/vm/pulse.png",
+            tags: ["HackMyVM", "Web Recon", "PrivEsc", "Linux"],
+            shortDescription: "Máquina comunitaria diseñada para HackMyVM centrada en reconocimiento metódico de puertos y servicios, descubrimiento web y escalada en Linux.",
+            downloadUrl: "https://mega.nz/file/3oU2zZLb#JJU5CyrYP8cX0FFWuYtB552K0ZKbJtn0BwggoHkO_1Y",
             fullDetails: {
-                scenario: "Entorno corporativo que hospeda un servicio interno de visualización de bitácoras y diagnóstico de servidores.",
-                attackVector: "El parámetro `page` del portal web no sanitiza correctamente la ruta. Mediante Log Poisoning en `/var/log/apache2/access.log` se obtiene una web shell interactiva.",
-                privilegeEscalation: "Inspección de `sudo -l` revela permisos para ejecutar un script en python sin contraseña. Vulnerable a Library Hijacking en módulo local.",
-                flagUser: "user{f73a9e...}",
-                flagRoot: "root{b9210c...}"
+                scenario: "Servidor Linux corporativo con servicios web y configuraciones susceptibles de enumeración profunda.",
+                attackVector: "Descubrimiento de servicios web, análisis de rutas y explotación de vector web para obtención de shell de usuario.",
+                privilegeEscalation: "Enumeración interna del sistema Linux y abuso de binarios o configuraciones para alcanzar permisos de root.",
+                flagUser: "user{...}",
+                flagRoot: "root{...}"
             }
         },
         {
             id: "mach-2",
-            title: "InfiltrateBox",
-            platform: "Dockerlabs",
+            title: "Automatismos Rodriguez",
+            platform: "TheHackersLabs",
+            platformUrl: "https://labs.thehackerslabs.com/machine/283",
             difficulty: "Fácil",
             os: "Linux",
             releaseDate: "2024",
-            tags: ["FTP Anonymous", "Brute Force", "SUID Abuse", "Capabilities"],
-            shortDescription: "Laboratorio introductorio ideal para principiantes: enumeración de servicios sin autenticación y explotación de permisos SUID especiales.",
-            downloadUrl: "https://dockerlabs.es",
-            writeupUrl: "#writeup-infiltratebox",
+            logo: "https://labs.thehackerslabs.com/static/uploads/machines/automatismos.png",
+            tags: ["TheHackersLabs", "Web", "SUID", "Creds Leak"],
+            shortDescription: "Escenario corporativo de una empresa de automatismos con servicios web vulnerables, filtración de credenciales y escalada del sistema.",
+            downloadUrl: "https://drive.google.com/file/d/1ygDRNkHGtv18PlnPFDDAjEsOqBpmesWx/view",
             fullDetails: {
-                scenario: "Servidor de archivos FTP de una pequeña startup con políticas de credenciales débiles.",
-                attackVector: "Acceso anónimo al servicio FTP que contiene un backup de configuración con credenciales en texto plano para SSH.",
-                privilegeEscalation: "Búsqueda de binarios con capabilities configuradas (`getcap -r / 2>/dev/null`), explotando `python3 cap_setuid+ep` para spawnear una shell de root.",
-                flagUser: "user{1a2b3c...}",
-                flagRoot: "root{4d5e6f...}"
+                scenario: "Portal de una empresa industrial con áreas públicas y paneles internos.",
+                attackVector: "Enumeración web, localización de credenciales expuestas y acceso inicial vía credenciales débiles.",
+                privilegeEscalation: "Abuso de permisos en el sistema anfitrión para elevar privilegios a root.",
+                flagUser: "user{...}",
+                flagRoot: "root{...}"
             }
         },
         {
             id: "mach-3",
-            title: "CorpHQ",
-            platform: "VulnHub",
-            difficulty: "Difícil",
-            os: "Linux / AD",
+            title: "Flasky",
+            platform: "Dockerlabs",
+            platformUrl: "https://dockerlabs.es/",
+            difficulty: "Fácil",
+            os: "Linux (Docker)",
             releaseDate: "2024",
-            tags: ["SQLi Error-based", "JWT Tampering", "Kernel Exploit / Cronjob"],
-            shortDescription: "Entorno más complejo que involucra inyecciones SQL ciegas, falsificación de tokens JWT para evasión de roles de administración y secuestro de cronjobs.",
-            downloadUrl: "https://www.vulnhub.com",
-            writeupUrl: "#writeup-corphq",
+            logo: "https://dockerlabs.es/img/maquina/222",
+            tags: ["Dockerlabs", "Flask", "Python", "SSTI"],
+            shortDescription: "Laboratorio basado en Python/Flask enfocado en vulnerabilidades comunes en microframeworks web y escape dentro del contenedor.",
+            downloadUrl: "https://gestion-maquinas.dockerlabs.es/dl/flasky.zip",
             fullDetails: {
-                scenario: "Portal de gestión de empleados con autenticación basada en JWT y base de datos relacional.",
-                attackVector: "Inyección SQL en endpoint de búsqueda para extraer la clave secreta débil del JWT. Modificación de claims para obtener rol `admin` y subida de archivo php malicioso.",
-                privilegeEscalation: "Monitoreo con pspy revela una tarea cron ejecutada periódicamente por root con permisos de escritura en un script dependiente.",
-                flagUser: "user{99ee11...}",
-                flagRoot: "root{00aa22...}"
+                scenario: "Aplicación web ligera construida con Flask y Python.",
+                attackVector: "Manipulación de entradas en la aplicación Flask para conseguir ejecución remota de código.",
+                privilegeEscalation: "Inspección de permisos y binarios dentro del contenedor para tomar control como root.",
+                flagUser: "user{...}",
+                flagRoot: "root{...}"
+            }
+        },
+        {
+            id: "mach-4",
+            title: "Autoescuela",
+            platform: "Dockerlabs",
+            platformUrl: "https://dockerlabs.es/",
+            difficulty: "Fácil",
+            os: "Linux (Docker)",
+            releaseDate: "2024",
+            logo: "https://dockerlabs.es/img/maquina/220",
+            tags: ["Dockerlabs", "Auth Bypass", "Web", "Sudoers"],
+            shortDescription: "Simulación del portal de una autoescuela con fallos de autenticación, enumeración de paneles y explotación de permisos.",
+            downloadUrl: "https://gestion-maquinas.dockerlabs.es/dl/autoescuela.zip",
+            fullDetails: {
+                scenario: "Sistema de gestión escolar para alumnos y profesores.",
+                attackVector: "Bypass de control de acceso en formularios web y subida de archivos maliciosos.",
+                privilegeEscalation: "Abuso de comandos autorizados con sudo sin contraseña.",
+                flagUser: "user{...}",
+                flagRoot: "root{...}"
+            }
+        },
+        {
+            id: "mach-5",
+            title: "Profetas",
+            platform: "Dockerlabs",
+            platformUrl: "https://dockerlabs.es/",
+            difficulty: "Media",
+            os: "Linux (Docker)",
+            releaseDate: "2024",
+            logo: "https://dockerlabs.es/img/maquina/209",
+            tags: ["Dockerlabs", "Logic Flaw", "Config Leak", "PrivEsc"],
+            shortDescription: "Reto temático enfocado en lógica de negocio, manipulación de parámetros y análisis forense rápido de archivos de configuración.",
+            downloadUrl: "https://gestion-maquinas.dockerlabs.es/dl/profetas.zip",
+            fullDetails: {
+                scenario: "Plataforma web con lógica de validación vulnerable y pistas en configuración.",
+                attackVector: "Explotación de fallo de lógica para saltar restricciones y obtener shell.",
+                privilegeEscalation: "Escalada mediante tareas programadas o binarios especiales.",
+                flagUser: "user{...}",
+                flagRoot: "root{...}"
+            }
+        },
+        {
+            id: "mach-6",
+            title: "CuentaAtrás",
+            platform: "Dockerlabs",
+            platformUrl: "https://dockerlabs.es/",
+            difficulty: "Fácil",
+            os: "Linux (Docker)",
+            releaseDate: "2024",
+            logo: "https://dockerlabs.es/img/maquina/220",
+            tags: ["Dockerlabs", "Cronjobs", "Time-based", "Linux"],
+            shortDescription: "Desafío contrarreloj con pistas ocultas, tareas cronometradas y encadenamiento de pequeños fallos para la consecución de root.",
+            downloadUrl: "https://gestion-maquinas.dockerlabs.es/dl/cuentaatras.zip",
+            fullDetails: {
+                scenario: "Servidor con tareas automatizadas en intervalos periódicos.",
+                attackVector: "Descubrimiento de ficheros ocultos y explotación de servicios expuestos.",
+                privilegeEscalation: "Secuestro de scripts temporales ejecutados por root.",
+                flagUser: "user{...}",
+                flagRoot: "root{...}"
+            }
+        },
+        {
+            id: "mach-7",
+            title: "acmecorp",
+            platform: "Dockerlabs",
+            platformUrl: "https://dockerlabs.es/",
+            difficulty: "Media",
+            os: "Linux (Docker)",
+            releaseDate: "2024",
+            logo: "https://dockerlabs.es/img/maquina/292",
+            tags: ["Dockerlabs", "Corporate", "Multi-stage", "RCE"],
+            shortDescription: "Entorno empresarial que recrea los servicios internos de la compañía ficticia ACME. Múltiples vectores de ataque para usuario y superusuario.",
+            downloadUrl: "https://gestion-maquinas.dockerlabs.es/dl/acme.zip",
+            fullDetails: {
+                scenario: "Infraestructura corporativa con portal de empleados y servicios de bases de datos.",
+                attackVector: "Vulnerabilidad web crítica que otorga ejecución remota de código.",
+                privilegeEscalation: "Auditoría de servicios internos y escalada mediante configuraciones débiles de permisos.",
+                flagUser: "user{...}",
+                flagRoot: "root{...}"
             }
         }
     ],
@@ -337,6 +421,40 @@ Constantemente aprendiendo y perfeccionando habilidades en metodologías de hack
                 privilegeEscalation: "Binario SUID personalizado que llama al comando `tar` de forma relativa. Modificación del PATH para ejecutar un binario `tar` falso que genera una /bin/bash con SUID.",
                 keyTakeaways: "Siempre usar rutas absolutas al invocar binarios dentro de ejecutables con bits SUID asignados."
             }
+        },
+        {
+            id: "ctf-zabbixploit",
+            title: "Zabbixploit",
+            platform: "Dockerlabs",
+            difficulty: "Fácil",
+            os: "Linux",
+            date: "2024",
+            category: "Web & SUID Exploitation",
+            tags: ["Dockerlabs", "Zabbix", "SUID", "YouTube Walkthrough"],
+            summary: "Resolución completa en vídeo de la máquina Zabbixploit en DockerLabs con explotación web y elevación de privilegios.",
+            writeup: {
+                recon: "Escaneo con Nmap y descubrimiento del panel de administración Zabbix.",
+                initialAccess: "Autenticación y explotación de vulnerabilidades en Zabbix para ejecutar comandos en el contenedor.",
+                privilegeEscalation: "Abuso de binarios con permisos especiales para obtener la flag de root.",
+                keyTakeaways: "Disponible en formato vídeo paso a paso en mi canal de YouTube."
+            }
+        },
+        {
+            id: "ctf-bitb",
+            title: "BITB",
+            platform: "Hack The Box / HackMyVM",
+            difficulty: "Fácil",
+            os: "Linux",
+            date: "2024",
+            category: "Browser-In-The-Browser",
+            tags: ["HackMyVM", "BITB", "Web Recon", "SUID"],
+            summary: "Explotación de la técnica Browser-In-The-Browser simulando interfaz web legítima para recolección de credenciales y escalada en Linux.",
+            writeup: {
+                recon: "Escaneo de puertos 22 y 80 con Nmap y fuzzing de directorios con gobuster.",
+                initialAccess: "Análisis del frontend y vector BITB para captura de credenciales y acceso vía SSH.",
+                privilegeEscalation: "Auditoría de binarios SUID y comandos sudo para spawnear shell como root.",
+                keyTakeaways: "Importancia de verificar la autenticidad de ventanas emergentes y permisos en el sistema."
+            }
         }
     ],
 
@@ -352,18 +470,25 @@ Constantemente aprendiendo y perfeccionando habilidades en metodologías de hack
             githubUrl: "https://github.com/mikisbd/nmip1"
         },
         {
-            title: "Custom CTF Vulnerable Labs",
-            category: "Entornos Vulnerables",
-            description: "Serie de máquinas virtuales y contenedores Docker diseñados específicamente para entrenamiento en técnicas de explotación Web y escalada de privilegios.",
-            tags: ["Docker", "Linux", "Vulnerabilities", "CTF"],
+            title: "Autopwn Chamilo (CVE-2023-4226)",
+            category: "Exploit Chain / Python",
+            description: "Exploit chain 100% automatizado en Python: conexión FTP anónima, inicio de sesión en Chamilo LMS, upload bypass con .htaccess y ejecución remota para root shell.",
+            tags: ["Python 3", "Autopwn", "Dockerlabs", "RCE", "Exploit"],
             githubUrl: "https://github.com/mikisbd"
         },
         {
-            title: "PrivEsc & Recon Cheatsheet",
-            category: "Recursos / Docs",
-            description: "Recopilación exhaustiva de comandos, técnicas de enumeración rápida en Linux/Windows y vectores habituales de escalada de privilegios.",
-            tags: ["Cheatsheet", "PrivEsc", "Linux", "Windows"],
+            title: "suforce.sh",
+            category: "Post-Explotación / Scripting",
+            description: "Utilidad en Bash para fuerza bruta local contra usuarios en Linux a través del comando /bin/su con diccionarios personalizados.",
+            tags: ["Bash", "Brute Force", "Linux", "PrivEsc"],
             githubUrl: "https://github.com/mikisbd"
+        },
+        {
+            title: "Repositorio de Writeups en Google Drive",
+            category: "Documentación / Writeups",
+            description: "Carpetas públicas en Google Drive con notas técnicas, capturas y guías detalladas de máquinas resueltas en Dockerlabs y HackMyVM.",
+            tags: ["Dockerlabs", "HackMyVM", "Google Drive", "Writeups"],
+            githubUrl: "https://drive.google.com/drive/folders/1Xs1DmpTJFfZaW_74a0crjRRNADA1c1dp?usp=sharing"
         }
     ]
 };

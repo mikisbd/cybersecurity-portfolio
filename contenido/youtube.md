@@ -27,7 +27,8 @@ Bienvenido a mi canal de youtebe.
 
 ### 1. 🎯 Rooteando máquinas | CTFs resueltos paso a paso
 
-* [🧑‍💻​ CTF Walkthroughs](https://www.youtube.com/playlist?list=PLraY-RO5XbU7BEaIinCuBAdx_wc6q7y7T)
+* [🧑‍💻 CTF Walkthroughs (Playlist Completa)](https://www.youtube.com/playlist?list=PLraY-RO5XbU7BEaIinCuBAdx_wc6q7y7T)
+* [▶️ Máquina Zabbixploit - Dockerlabs CTF](https://www.youtube.com/watch?v=qv002Hrikio&list=PLraY-RO5XbU7BEaIinCuBAdx_wc6q7y7T)
 
 ### 2. ​😈​ LILYGO T-Embed CC1101 Plus
 

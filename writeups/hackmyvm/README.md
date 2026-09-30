@@ -4,11 +4,21 @@
 
 ---
 
-## 📋 Lista de Máquinas Resueltas
+## 📂 Repositorio de Writeups en Google Drive
 
-| Máquina | Dificultad | Sistema Operativo | Vectores Clave | Writeup |
+> 📁 **[Acceder a mi Carpeta de Writeups de HackMyVM en Google Drive](https://drive.google.com/drive/folders/1La5aaH-siBZLE7b0k3STqg_VX179OhQx?usp=sharing)**
+>
+> Documentación detallada de mis resoluciones de máquinas de HackMyVM, guías paso a paso y apuntes de explotación.
+
+---
+
+## 📋 Lista de Máquinas Destacadas
+
+| Máquina | Dificultad | SO | Vectores Clave | Writeup / Ficha |
 | :--- | :--- | :--- | :--- | :--- |
-| **BITB** | Fácil / Media | Linux | Browser In The Browser / Web Enum / SUID | [Leer Writeup](bitb.md) |
+| **BITB** | Fácil / Media | Linux | Browser In The Browser / Web Enum / SUID | [📖 Leer Writeup](bitb.md) |
+| **Pulse** | Media | Linux | Creada por mí para la comunidad | [🖥️ Ver Ficha de Máquina](../../maquinas-creadas/README.md#1--pulse) |
+| **Colección HackMyVM** | Varias | Linux | Múltiples vectores de ataque | [📁 Ver en Google Drive](https://drive.google.com/drive/folders/1La5aaH-siBZLE7b0k3STqg_VX179OhQx?usp=sharing) |
 
 ---
 

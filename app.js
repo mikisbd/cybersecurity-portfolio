@@ -45,6 +45,7 @@ function initHero() {
     if (heroSocials) {
         heroSocials.innerHTML = `
             ${p.social.github ? `<a href="${p.social.github}" target="_blank" rel="noopener" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>` : ''}
+            ${p.social.youtube ? `<a href="${p.social.youtube}" target="_blank" rel="noopener" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>` : ''}
             ${p.social.linkedin ? `<a href="${p.social.linkedin}" target="_blank" rel="noopener" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>` : ''}
             ${p.social.hackthebox ? `<a href="${p.social.hackthebox}" target="_blank" rel="noopener" class="social-icon" title="Hack The Box"><i class="fas fa-cube"></i></a>` : ''}
             ${p.social.tryhackme ? `<a href="${p.social.tryhackme}" target="_blank" rel="noopener" class="social-icon" title="TryHackMe"><i class="fas fa-fire"></i></a>` : ''}
@@ -241,9 +242,12 @@ function initCreatedMachines() {
         return `
             <div class="cyber-card">
                 <div class="machine-card-header">
-                    <h3 class="machine-title">
-                        <i class="fas fa-microchip neon-text-green"></i> ${mach.title}
-                    </h3>
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        ${mach.logo ? `<img src="${mach.logo}" alt="${mach.title}" style="width: 38px; height: 38px; border-radius: 6px; object-fit: contain; background: rgba(0,0,0,0.3); padding: 2px; border: 1px solid var(--border-color);" onerror="this.style.display='none'">` : ''}
+                        <h3 class="machine-title">
+                            <i class="fas fa-microchip neon-text-green"></i> ${mach.title}
+                        </h3>
+                    </div>
                     <span class="badge-diff ${diffClass}">${mach.difficulty}</span>
                 </div>
                 <div class="machine-platform">
@@ -256,11 +260,16 @@ function initCreatedMachines() {
                 <div class="machine-footer">
                     ${mach.downloadUrl ? `
                         <a href="${mach.downloadUrl}" target="_blank" rel="noopener" class="btn btn-primary btn-sm">
-                            <i class="fas fa-download"></i> Descargar / Desplegar
+                            <i class="fas fa-download"></i> Descargar
+                        </a>
+                    ` : ''}
+                    ${mach.platformUrl ? `
+                        <a href="${mach.platformUrl}" target="_blank" rel="noopener" class="btn btn-secondary btn-sm">
+                            <i class="fas fa-external-link-alt"></i> Plataforma
                         </a>
                     ` : ''}
                     <button class="btn btn-secondary btn-sm" onclick="openMachineModal('${mach.id}')">
-                        <i class="fas fa-file-alt"></i> Ver Ficha Técnica
+                        <i class="fas fa-file-alt"></i> Ficha
                     </button>
                 </div>
             </div>
@@ -413,6 +422,11 @@ function initContact() {
         ${p.social.email ? `
             <a href="${p.social.email}" class="btn btn-primary">
                 <i class="fas fa-envelope"></i> Enviar Correo
+            </a>
+        ` : ''}
+        ${p.social.youtube ? `
+            <a href="${p.social.youtube}" target="_blank" rel="noopener" class="btn btn-secondary">
+                <i class="fab fa-youtube" style="color: #ff0033;"></i> Canal de YouTube
             </a>
         ` : ''}
         ${p.social.linkedin ? `
