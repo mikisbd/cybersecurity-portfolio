@@ -34,8 +34,8 @@ Constantemente aprendiendo y perfeccionando habilidades en metodologías de hack
         stats: {
             ctfsSolved: "+50",
             machinesCreated: "3+",
-            certificationsCount: "2+",
-            yearsExp: "2+ años"
+            certificationsCount: "35+",
+            yearsExp: "3+ años"
         }
     },
 
@@ -89,29 +89,79 @@ Constantemente aprendiendo y perfeccionando habilidades en metodologías de hack
     certifications: [
         {
             id: "cert-1",
-            title: "eJPTv2 (eLearnSecurity Junior Penetration Tester)",
+            title: "Junior Penetration Tester (eJPT)",
             issuer: "INE Security",
-            date: "2024",
-            status: "Completada", // "Completada" o "En curso"
+            date: "Octubre 2025",
+            status: "Completada",
             badge: "https://images.credly.com/size/340x340/images/e8cda1a0-d44b-4c28-86d1-447a16f1947e/image.png",
-            verifyUrl: "#",
-            description: "Evaluación práctica 100% real sobre reconocimiento, escaneo, análisis de vulnerabilidades web/red y explotación de sistemas."
+            verifyUrl: "https://certs.ine.com/b3cdfbde-1293-4953-aa8f-6ac99c07be75",
+            description: "Evaluación 100% práctica de reconocimiento, escaneo, análisis de vulnerabilidades web/red y explotación de sistemas."
         },
         {
             id: "cert-2",
-            title: "Certified Ethical Hacker / Security+",
-            issuer: "CompTIA / EC-Council",
-            date: "2023",
+            title: "Certified Red Team Analyst (CRTA)",
+            issuer: "CyberWarFare Labs",
+            date: "Junio 2025",
             status: "Completada",
-            badge: "https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53778754a3a6/image.png",
-            verifyUrl: "#",
-            description: "Fundamentos sólidos de ciberseguridad, gestión de amenazas, arquitectura segura y respuesta ante incidentes."
+            badge: "https://images.credly.com/size/340x340/images/b6f481c7-7a52-4752-87eb-1f3eb1a9e332/image.png",
+            verifyUrl: "https://labs.cyberwarfare.live/badge/certificate/6846e60bd4374855726e4182",
+            description: "Ataques avanzados a entornos Active Directory corporativos, evasión de defensas, Kerberos, persistencia y movimiento lateral."
         },
         {
             id: "cert-3",
-            title: "CPTS / OSCP (Offensive Security Certified Professional)",
+            title: "Certified Web Security Expert (CWSE)",
+            issuer: "Hackviser",
+            date: "Octubre 2025",
+            status: "Completada",
+            badge: "https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53778754a3a6/image.png",
+            verifyUrl: "https://hackviser.com/verify?id=HV-CWSE-87YSBBHC",
+            description: "Auditoría profunda en aplicaciones web, OWASP Top 10 avanzado, bypass de autenticación y encadenamiento de exploits."
+        },
+        {
+            id: "cert-4",
+            title: "Certified Associate Penetration Tester (CAPT)",
+            issuer: "Hackviser",
+            date: "Octubre 2025",
+            status: "Completada",
+            badge: "https://images.credly.com/size/340x340/images/e8cda1a0-d44b-4c28-86d1-447a16f1947e/image.png",
+            verifyUrl: "https://hackviser.com/verify?id=HV-CAPT-6OJ6VW6Q",
+            description: "Metodologías de penetración en red, explotación de servicios desactualizados y escalada de privilegios en Linux."
+        },
+        {
+            id: "cert-5",
+            title: "Certified Cyber Security Analyst (C3SA)",
+            issuer: "CyberWarFare Labs",
+            date: "Abril 2025",
+            status: "Completada",
+            badge: "https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53778754a3a6/image.png",
+            verifyUrl: "https://app.kajabi.com/certificates/e2408070",
+            description: "Análisis de amenazas, detección de anomalías en infraestructura de red e investigación de vectores de ataque."
+        },
+        {
+            id: "cert-6",
+            title: "Google Cybersecurity Professional",
+            issuer: "Google / Coursera",
+            date: "Febrero 2025",
+            status: "Completada",
+            badge: "https://images.credly.com/size/340x340/images/00634f82-b07f-4bbd-a6bb-53778754a3a6/image.png",
+            verifyUrl: "https://www.coursera.org/account/accomplishments/specialization/4RS1WXAZI25J",
+            description: "Especialización completa en detección y respuesta a incidentes, seguridad de redes, forense y automatización con Python y SQL."
+        },
+        {
+            id: "cert-7",
+            title: "Google IT Support Professional Certificate",
+            issuer: "Google / Credly",
+            date: "Septiembre 2022",
+            status: "Completada",
+            badge: "https://images.credly.com/size/340x340/images/e9ce2672-6331-4e59-a38b-99f74623092d/image.png",
+            verifyUrl: "https://www.credly.com/badges/e9ce2672-6331-4e59-a38b-99f74623092d/linked_in_profile",
+            description: "Administración de sistemas, protocolos de red, resolución de problemas de TI, Linux y seguridad de la información."
+        },
+        {
+            id: "cert-8",
+            title: "CPTS / OSCP",
             issuer: "OffSec / Hack The Box Academy",
-            date: "2025",
+            date: "2026",
             status: "En preparación",
             badge: "https://images.credly.com/size/340x340/images/b6f481c7-7a52-4752-87eb-1f3eb1a9e332/image.png",
             verifyUrl: "#",
